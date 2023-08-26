@@ -1,3 +1,19 @@
 body {
   background: url(./assets/bg-mobile.jpg) no-repeat center top/cover;
 }
+
+#container {
+  width: 360px;
+  height: 712px;
+  margin: 0 auto;
+  color: white;
+  margin-top: 56px;
+}
+
+#profile {
+  text-align: center;
+}
+
+#profile img {
+  width: 112px;
+}
