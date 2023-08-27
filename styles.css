@@ -22,6 +22,11 @@ body * {
 
 #profile {
   text-align: center;
+  padding: 24px;
+}
+
+#profile p {
+  margin-top: 8px;
 }
 
 #profile img {
