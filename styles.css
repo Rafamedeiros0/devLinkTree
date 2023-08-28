@@ -4,13 +4,35 @@
   box-sizing: border-box;
 }
 
+/* DARK MOD */
+
+:root {
+  --text-color: white;
+  --bg-mobile: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(255, 255, 255, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --icon-switch: url(./assets/moon-star.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-mobile: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --icon-switch: url(./assets/sun.svg);
+}
+
 body {
-  background: url(./assets/bg-mobile.jpg) no-repeat center top/cover;
+  background: var(--bg-mobile) no-repeat center top/cover;
 }
 
 body * {
   font-family: "Inter", sans-serif;
-  color: white;
+  color: var(--text-color);
 }
 
 #container {
@@ -43,7 +65,7 @@ body * {
 #switch button {
   width: 32px;
   height: 32px;
-  background: white url(./assets/moon-switch.svg) no-repeat center;
+  background: white var(--icon-switch) no-repeat center;
   border: 0;
   border-radius: 50%;
 
@@ -64,8 +86,8 @@ body * {
   display: block;
   width: 64px;
   height: 24px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
   border-radius: 9999px;
   backdrop-filter: blur(4px);
 }
@@ -90,15 +112,15 @@ ul li a {
   text-decoration: none;
   font-weight: 500;
 
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--stroke-color);
+  background: var(--surface-color-hover);
   border-radius: 8px;
   backdrop-filter: blur(4px);
 }
 
 ul li a:hover {
-  border: 1.5px solid #fff;
-  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid var(--text-color);
+  background: var(--surface-color-hover);
 }
 
 #social {
@@ -122,7 +144,7 @@ ul li a:hover {
 #social a:hover {
   padding: 16px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--highlight-color);
 }
 
 footer {
