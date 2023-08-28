@@ -77,6 +77,10 @@ body * {
   transform: translate(0, -50%);
 }
 
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
+}
+
 .light #switch button {
   right: 0;
   left: initial;
